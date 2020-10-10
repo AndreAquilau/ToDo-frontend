@@ -34,6 +34,17 @@ module.exports = {
     'import/extensions': 'off',
     'no-console': 'off',
     'no-param-reassign': 'off',
+    'import/prefer-default-export': 'off',
+    'react/display-name': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
+    'import/no-dynamic-require': 'off',
+    'global-require': 'off',
+    'react/no-array-index-key': 'off',
+    'jsx-a11y/alt-text': 'off',
+    'array-callback-return': 'off',
+    'consistent-return': 'off',
+    'no-alert': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
   },
   settings: {
     react: {
