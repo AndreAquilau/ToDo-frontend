@@ -1,4 +1,15 @@
 ## Documentação do Projeto ToDo Front-End.
+
+#### Libs Utilizadas
+
+## * react
+## * react-dom
+## * react-router-dom
+## * styles-components
+## * axios
+## * dotenv
+## * date-fns
+
 ~~~bash
 npx create-react-app frontend --template typescript
 ~~~
@@ -145,3 +156,5 @@ module.exports = {
   }
 }
 ~~~
+
+
