@@ -10,6 +10,7 @@
 * #### dotenv
 * #### date-fns
 
+#### Starting Project
 ~~~bash
 npx create-react-app frontend --template typescript
 ~~~
