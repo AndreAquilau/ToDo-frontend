@@ -158,4 +158,35 @@ module.exports = {
 }
 ~~~
 
+#### React
+* #### useState
+* #### useEffect
+* #### useMemo
+
+##### useState
+O método useState retorna um Array de duas posição.<br>
+A Primeira posição é o valor inicial, na qual será guardado o estado da variável.<br>
+A Segunda posição é uma função que é utilizada para mudar o valor do estado.<br>
+~~~ts
+import React, { useState } from 'react';
+
+const [name, setName] = useState<string>();
+
+function rename(name: string): void {
+  setName(name);
+}
+~~~
+##### useEffect
+O método useEffect é uma função que é executada toda vez que uma de suas dependência é atualizada. <br>
+O método possui dois parâmetros, o primeiro é uma função de callback e o segundo um array.<br>
+O primeiro será executado toda que uma das sua depenências atualizar.<br>
+O segundo parâmetro são todas as dependência que seram manitoradas.<br>
+~~~ts
+useEffect(() => {
+  console.log(`O nome mudou para ${name}`)
+}, [name])
+~~~
+##### useMemo
+~~~ts
+~~~
 
