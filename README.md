@@ -182,9 +182,10 @@ O método possui dois parâmetros, o primeiro é uma função de callback e o se
 O primeiro será executado toda que uma das sua depenências atualizar.<br>
 O segundo parâmetro são todas as dependência que seram manitoradas.<br>
 ~~~ts
+import React, { useEffect } from 'react';
 useEffect(() => {
   console.log(`O nome mudou para ${name}`)
-}, [name])
+}, [name]);
 ~~~
 #### useMemo
 ~~~ts
