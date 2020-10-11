@@ -2,13 +2,13 @@
 
 #### Libs Utilizadas
 
-* ### react
-* ### react-dom
-* ### react-router-dom
-* ### styles-components
-* ### axios
-* ### dotenv
-* ### date-fns
+* #### react
+* #### react-dom
+* #### react-router-dom
+* #### styles-components
+* #### axios
+* #### dotenv
+* #### date-fns
 
 ~~~bash
 npx create-react-app frontend --template typescript
