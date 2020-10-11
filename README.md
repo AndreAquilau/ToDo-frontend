@@ -167,7 +167,7 @@ module.exports = {
 O método useState retorna um Array de duas posição.<br>
 A Primeira posição é o valor inicial, na qual será guardado o estado da variável.<br>
 A Segunda posição é uma função que é utilizada para mudar o valor do estado.<br>
-~~~ts
+~~~tsx
 import React, { useState } from 'react';
 
 const [name, setName] = useState<string>();
@@ -181,7 +181,7 @@ O método useEffect é uma função que é executada toda a página é carregada
 O método possui dois parâmetros, o primeiro é uma função de callback e o segundo um array.<br>
 O primeiro será executado toda que uma das sua depenências atualizar.<br>
 O segundo parâmetro são todas as dependência que seram manitoradas.<br>
-~~~ts
+~~~tsx
 import React, { useEffect } from 'react';
 useEffect(() => {
   console.log(`O nome mudou para ${name}`)
@@ -191,7 +191,7 @@ useEffect(() => {
 O método possui dois parâmetros, o primeiro é uma função de callback e o segundo um array.<br>
 O primeiro será executado se a denpendência exister.<br>
 O segundo parâmetro é a dependência que seram manitoradas para função ser executada.<br>
-~~~ts
+~~~tsx
 import React, { useMemo } from 'react';
 import { formt } from 'date-fns';
 export default function item () {
