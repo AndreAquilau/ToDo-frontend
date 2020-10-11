@@ -177,7 +177,7 @@ function rename(name: string): void {
 }
 ~~~
 #### useEffect
-O método useEffect é uma função que é executada toda vez que uma de suas dependência é atualizada. <br>
+O método useEffect é uma função que é executada toda a página é carregada e toda vez que uma de suas dependência é atualizada. <br>
 O método possui dois parâmetros, o primeiro é uma função de callback e o segundo um array.<br>
 O primeiro será executado toda que uma das sua depenências atualizar.<br>
 O segundo parâmetro são todas as dependência que seram manitoradas.<br>
@@ -188,6 +188,19 @@ useEffect(() => {
 }, [name]);
 ~~~
 #### useMemo
+O método possui dois parâmetros, o primeiro é uma função de callback e o segundo um array.<br>
+O primeiro será executado se a denpendência exister.<br>
+O segundo parâmetro é a dependência que seram manitoradas para função ser executada.<br>
 ~~~ts
+import React, { useMemo } from 'react';
+import { formt } from 'date-fns';
+export default function item () {
+
+  const date = useMemo(() => format(new Date(when), 'dd/MM/yyyy'), [when]);
+
+  return (
+      <h1>{date}<h1/>
+  )
+}
 ~~~
 
