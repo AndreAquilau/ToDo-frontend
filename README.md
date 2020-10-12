@@ -262,3 +262,60 @@ import { Redirect } from 'react-router-dom';
 {redirect && <Redirect to="/" />}
 ~~~
 
+### Styled-Components
+~~~tsx
+import { createGlobalStyle } from 'styled-components';
+
+export default createGlobalStyle`
+@import url('<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">');
+* {
+  box-sizing: border-box;
+  a {
+    text-decoration: none;
+  }
+}
+`;
+~~~
+~~~tsx
+import styled from 'styled-components';
+import filterCardConfig from '../../config/filterCard'
+
+export const Container = styled.div`
+
+  background: ${(props: { actived: boolean }) =>
+    props.actived ? backgroundColor.default : backgroundColor.selected};
+
+`;
+
+~~~
+
+### Axios
+~~~tsx
+import axios from 'axios';
+
+const api = axios.create({
+  baseURL: process.env.URL_API || 'http://localhost:5000',
+});
+
+export default api;
+
+~~~
+~~~tsx
+async function loadTasks() {
+    await api
+      .get(`/task/filter/${filterActived}/11:11:11:11:11:11`)
+      .then((response) => {
+        setTasks(response.data);
+      })
+      .catch((error) => console.log(error.message));
+  }
+~~~
+
+### Date-fns
+~~~tsx
+import React, { useMemo } from 'react';
+import { format } from 'date-fns';
+
+const date = useMemo(() => format(new Date(when), 'dd/MM/yyyy'), [when]);
+const time = useMemo(() => format(new Date(when), 'HH:mm'), [when]);
+~~~
