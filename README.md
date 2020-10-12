@@ -208,6 +208,7 @@ export default function item () {
 O react-dom é uma lib utilizada para manipulação do DOM.<br/>
 Possui um método muito utilizado para renderizar componente "render".<br>
 O método render, renderiza um componente um componente em um elemento da arvore do DOM.<br>
+O método render recebi dois parâmetros, o primeiro é um componente, o segundo é um elemento da arvare do DOM.
 ~~~tsx
 import React from 'react';
 import ReactDOM from 'react-dom';
