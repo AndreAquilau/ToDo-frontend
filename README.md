@@ -204,7 +204,7 @@ export default function item () {
 }
 ~~~
 
-### ReactDom
+### ReactDOM
 O react-dom é uma lib utilizada para manipulação do DOM.<br/>
 Possui um método muito utilizado para renderizar componente "render".<br>
 O método render, renderiza um componente um componente em um elemento da arvore do DOM.<br>
@@ -220,6 +220,45 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root'),
 );
+~~~
 
+### React-Router-DOM
+
+~~~tsx
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+import Home from '../views/Home';
+import Task from '../views/Task';
+
+export default () => {
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/task" exact component={Task} />
+        <Route path="/task/:id" exact component={Task} />
+      </Switch>
+    </BrowserRouter>
+  );
+};
+~~~
+~~~tsx
+import React from 'react';
+import Routes from './routes/index';
+
+export default function App() {
+  return (
+    <div className="App">
+      <Routes />
+    </div>
+  );
+}
+~~~
+~~~tsx
+import React from 'react';
+import { Redirect } from 'react-router-dom';
+
+{redirect && <Redirect to="/" />}
 ~~~
 
