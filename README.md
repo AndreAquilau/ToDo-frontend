@@ -231,6 +231,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from '../views/Home';
 import Task from '../views/Task';
 
+// quando utilizamos parâmetros na URL na Route recuperamos pelo props.params
+
 export default () => {
   return (
     <BrowserRouter>
@@ -242,6 +244,16 @@ export default () => {
     </BrowserRouter>
   );
 };
+~~~
+~~~tsx
+<Link to={`/task/${task.id}`} key={task.id}>
+      <TaskCard
+        title={task.title}
+        description={task.description}
+        when={task.when}
+        icon={icons[task.type] || ''}
+      />
+</Link>
 ~~~
 ~~~tsx
 import React from 'react';
