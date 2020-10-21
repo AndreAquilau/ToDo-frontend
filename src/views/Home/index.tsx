@@ -23,23 +23,27 @@ export default (): JSX.Element => {
   const [tasks, setTasks] = useState([]);
   const [lateCount, setLateCount] = useState([]);
 
-  async function loadTasks() {
-    await api
+ function loadTasks() {
+    api
       .get(`/task/filter/${filterActived}/11:11:11:11:11:11`)
       .then((response) => {
+        console.log(response)
         setTasks(response.data);
       })
-      .catch((error) => console.log(error.message));
+      .catch((error) =>{
+        console.log(error);
+      })
   }
 
-  async function lateVerify() {
-    await api
+function lateVerify() {
+    api
       .get(`/task/filter/late/11:11:11:11:11:11`)
       .then((response) => {
-        console.log(response.data);
         setLateCount(response.data);
       })
-      .catch((error) => console.log(error.message));
+      .catch((error) => {
+        console.log(error.message);
+      })
   }
 
   async function notification() {
